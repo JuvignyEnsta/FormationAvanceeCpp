@@ -9,9 +9,9 @@ void transform( std::vector<double>& array, Func const& f )
 }
 
 template<typename F1, typename F2>
-auto funcDiv(  F1 const& f1, F2 const& f2 )
+auto funcDiv(  F1&& f1, F2&& f2 )
 {
-    return [&f1, &f2] (double x) { return f1(x) / f2(x); };
+    return [f1, f2] (double x) { return f1(x) / f2(x); };
 }
 
 int main()

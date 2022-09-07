@@ -1,15 +1,21 @@
-include ../make.inc
-execs = $(patsubst %.cpp,%.exe, $(wildcard *.cpp))
+include ../../make.inc
 
-.SUFFIXES:	.cpp
+execs = nullptr_example.exe  rvalue_exemple.exe  sharedptr_exemple.exe
 
 default:
-	echo ${execs}
+	@echo $(execs)
 
-all::	$(execs)
+all: $(execs)
 
 clean:
-	@rm -f *.exe *~ *.o
+	@rm -fr *.exe *~ *.o
 
-%.exe : %.cpp
-	$(CXX) $(CCOPT) $< -o $@ $(LIBS)
+nullptr_example.exe: nullptr_example.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+
+rvalue_exemple.exe : rvalue_exemple.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+
+sharedptr_exemple.exe: sharedptr_exemple.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+

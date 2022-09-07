@@ -1,4 +1,4 @@
-# Formation avancee C++ Moderne
+# Formation avancée C++ Moderne
 
 ## Compétences requises et but de la formation
 

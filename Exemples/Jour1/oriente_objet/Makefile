@@ -1,15 +1,22 @@
-include ../make.inc
-execs = $(patsubst %.cpp,%.exe, $(wildcard *.cpp))
+include ../../make.inc
 
-.SUFFIXES:	.cpp
+execs = classe_moderne_exemple.exe operateurs_litteraux.exe \
+        spaceship_exemple.exe
 
 default:
-	echo ${execs}
+	@echo $(execs)
 
-all::	$(execs)
+all: $(execs)
 
 clean:
-	@rm -f *.exe *~ *.o
+	@rm -fr *.exe *~ *.o
 
-%.exe : %.cpp
-	$(CXX) $(CCOPT) $< -o $@ $(LIBS)
+classe_moderne_exemple.exe: classe_moderne_exemple.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+
+operateurs_litteraux.exe: operateurs_litteraux.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+
+spaceship_exemple.exe: spaceship_exemple.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+

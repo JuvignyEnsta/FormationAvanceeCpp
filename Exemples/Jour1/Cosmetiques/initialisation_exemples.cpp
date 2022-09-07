@@ -70,9 +70,7 @@ int main()
   double const b[]={1.,1.,1.};
   // En 98, on aurait été obligé au mieux d'avoir un appel comme :
   // gmres(3,A,b,1,nullptr, 1.E-6, 1, 20, true); !
-std::vector<double> res = gmres(3, A, b,
-        {.relativeError=1.E-14, .isVerbose=true}
-			       );
+  std::vector<double> res = gmres(3, A, b, {.relativeError=1.E-14, .isVerbose=true} );
   
   return EXIT_SUCCESS;
 }
