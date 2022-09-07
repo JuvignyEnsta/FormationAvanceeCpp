@@ -35,4 +35,6 @@ La troisième partie sera consacrée aux nouveautés apportées par la librairie
 la génération de nombres aléatoires, le parallèlisme, les plages (ranges) et la mesure du temps. La plupart des notions abordées dans cette dernière
 partie (mise à part le multithreading) n'apportent pas de difficultés intellectuelles et seront donc exempts d'exercices.
 
+Un salon de discussion a été créé sur Element : 
+	https://element.onera.fr/#/room/#formationCpp:synapse.onera.fr
 
