@@ -33,7 +33,7 @@ for_exemple.exe: for_exemple.cpp
 	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
 
 initialisation_exemples.exe: initialisation_exemples.cpp
-	$(CXX) $(CCOPT)$(CCOPTIM) $< -o $@
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
 
 static_assert_example.exe: static_assert_example.cpp
 	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
