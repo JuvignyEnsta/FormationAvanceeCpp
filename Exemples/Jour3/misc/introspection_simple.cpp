@@ -25,7 +25,9 @@ template<typename CArray> void displayCArray( CArray const& t_array ) {
 int main()
 {
     double tableau[5][3][2];
+    double tableau2[] = {1.,2.,3.};
 
     displayCArray(tableau);
+    displayCArray(tableau2);
     return EXIT_SUCCESS;
 }

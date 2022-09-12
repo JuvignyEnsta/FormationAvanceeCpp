@@ -2,7 +2,7 @@ include ../../make.inc
 
 execs = acquire_and_release_exemples.exe bitfield_race_condition.exe manythreads_exemple.exe plain_vs_atomic_vs_volatile.exe \
 		thread_arguments_exemple.exe async_deferred_exemple.exe dictionnaire_partage.exe parallel_execution_exemple.exe      \
-		simple_mutex_exemple.exe true_false_sharing.exe
+		simple_mutex_exemple.exe true_false_sharing.exe shared_future_exemple.exe
 
 
 default:
@@ -42,3 +42,7 @@ simple_mutex_exemple.exe        : simple_mutex_exemple.cpp
 
 true_false_sharing.exe          : true_false_sharing.cpp
 	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+
+shared_future_exemple.exe       : shared_future_exemple.cpp
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+

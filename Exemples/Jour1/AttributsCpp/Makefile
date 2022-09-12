@@ -24,7 +24,7 @@ maybe_unused_exemple.exe: maybe_unused_exemple.cpp
 	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
 
 nodiscard_exemple.exe: nodiscard_exemple.cpp
-$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
+	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@
 
 notreturn_exemple.exe: notreturn_exemple.cpp
 	$(CXX) $(CCOPT) $(CCOPTIM) $< -o $@

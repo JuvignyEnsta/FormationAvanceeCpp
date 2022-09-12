@@ -38,7 +38,7 @@ public:
     Vecteur& operator = ( Vecteur            &&  u)
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
-        m_coefs.swap(u.m_coefs);;
+        m_coefs.swap(u.m_coefs);
         return *this;
     }
 

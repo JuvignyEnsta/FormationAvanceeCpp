@@ -28,7 +28,8 @@ auto generateMasses( std::int64_t nbMasses ) -> std::vector<Point>
 {
     std::cout << "Je calcule les points dans l'espace" << std::endl;
     std::vector<Point> masses; masses.reserve(nbMasses);
-    std::random_device rd;
+    std::random_device rd1;
+    std::mt19937 rd(rd1());
     std::uniform_real_distribution<double> distrib(-1., 1.);
     for ( std::int64_t iMass = 0; iMass < nbMasses; ++iMass )
     {
@@ -56,7 +57,7 @@ Point computeBarycenter( std::future<std::vector<Point>>  t_masses )
 
 int main()
 {
-    constexpr std::int64_t nbBodies = 10'000;
+    constexpr std::int64_t nbBodies = 10'000'000;
     std::cout << "Appel calcul des masses" << std::endl;
     auto masses = std::async(std::launch::deferred, generateMasses, nbBodies);
     std::cout << "Appel calcul du barycentre" << std::endl;

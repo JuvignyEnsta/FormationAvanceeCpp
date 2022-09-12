@@ -6,6 +6,7 @@
 #include <tuple>
 #include <ranges>
 #include <algorithm>
+#include <vector>
 
 void premiereversion()
 {
@@ -42,7 +43,7 @@ void troisiemeversion()
                              | std::views::transform( [=](int x){ return std::pair{x,z}; } );
                    } ) | std::views::join;
 
-    for (auto pairvalue : paires | std::ranges::views::take(10) )
+    for (auto pairvalue : paires | std::ranges::views::take(11) )
         std::cout << pairvalue.first << "," << pairvalue.second << " ";
     std::cout << std::endl;
 }

@@ -30,10 +30,10 @@ struct Allocator
 
 struct Tableau
 {
-    Allocator allocator;
+    [[no_unique_address]] Allocator allocator;
     std::size_t size;
-    bool is_static;
     double* coefs;
+    bool is_static;
     bool is_persistant;
 };
 

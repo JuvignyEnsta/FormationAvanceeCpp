@@ -20,5 +20,9 @@ int main()
     today += months(5u);
     displayDate(today);
 
+    year_month_day date2{2023y, January, 30d};
+    date2 += months(1u);
+    displayDate(date2);
+
     return EXIT_SUCCESS;
 }
